@@ -2,7 +2,7 @@
     resize: none;
     padding: 15px;
     border-radius: 15px;
-    border: 2px solid green;
+    border: 2px solid red;
     font-size: 16px;
     
 }
@@ -14,13 +14,14 @@
 .form__title{
     text-align: center;
     margin-bottom: 15px;
-    color: black;
+    color: red;
     font-weight: 400;
 }
 
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .form{
@@ -33,7 +34,7 @@
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 15px;
-    border: 2px solid green;
+    border: 2px solid red;
     font-size: 16px;
 }
 
