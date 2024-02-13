@@ -9,18 +9,18 @@ const Form = () => {
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
-        if (photo){
-            const formData = new FormData();
-            formData.append('photo',photo);
-            tg.sendData(formData);
-        }
+        
+        const formData = new FormData();
+        formData.append('photo',photo);
+        
         
         const data = {
             name,
             problem,
         }
         
-        tg.sendData(JSON.stringify(data));
+        tg.sendData(formData);
+        // tg.sendData(JSON.stringify(data));
     }, [name,problem,photo])
 
     useEffect(() => {
