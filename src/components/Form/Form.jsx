@@ -5,7 +5,7 @@ import { useTelegram } from '../../hooks/useTelegram';
 const Form = () => {
     const [name , setName] = useState();
     const [problem , setProblem] = useState();
-    const [photo, setPhoto] = useState(null);
+    const [photo, setPhoto] = useState();
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
