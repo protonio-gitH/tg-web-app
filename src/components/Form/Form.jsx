@@ -10,17 +10,13 @@ const Form = () => {
 
     const onSendData = useCallback(() => {
         
-        const formData = new FormData();
-        formData.append('photo',photo);
-        
         
         const data = {
             name,
             problem,
         }
 
-        tg.sendData(formData);
-        // tg.sendData(JSON.stringify(data));
+        tg.sendData(JSON.stringify(data));
     }, [name,problem,photo])
 
     useEffect(() => {
