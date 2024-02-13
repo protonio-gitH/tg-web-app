@@ -18,8 +18,8 @@ const Form = () => {
             name,
             problem,
         }
-        
-        tg.sendData(formData);
+
+        tg.sendData(JSON.stringify(formData));
         // tg.sendData(JSON.stringify(data));
     }, [name,problem,photo])
 
