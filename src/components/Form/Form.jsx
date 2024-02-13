@@ -5,14 +5,24 @@ import { useTelegram } from '../../hooks/useTelegram';
 const Form = () => {
     const [name , setName] = useState();
     const [problem , setProblem] = useState();
-    const [photo, setPhoto] = useState();
+    const [photo, setPhoto] = useState(null);
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
-        const data = {
-            name,
-            problem,
-            photo
+        if (!photo){
+            const formData = new FormData();
+            formData.append('photo',photo);
+            const data = {
+                name,
+                problem,
+                formData
+            }
+        }
+        else{
+            const data = {
+                name,
+                problem,
+            }
         }
         tg.sendData(JSON.stringify(data));
     }, [name,problem,photo])
@@ -47,6 +57,7 @@ const Form = () => {
     }
     const onChangePhoto = (e) => {
         setPhoto(e.target.files[0]);
+        
     }
 
     return (
