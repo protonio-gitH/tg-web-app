@@ -9,16 +9,17 @@ const Form = () => {
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
-        
-        const formData = new FormData();
-        formData.append('photo',photo);
+        if (photo){
+            const formData = new FormData();
+            formData.append('photo',photo);
+            tg.sendData(formData);
+        }
         
         const data = {
             name,
             problem,
         }
         
-        tg.sendData(JSON.stringify(data));
         tg.sendData(JSON.stringify(data));
     }, [name,problem,photo])
 
