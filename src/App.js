@@ -17,7 +17,7 @@ function App() {
     <div className='App'>
         <Header/>
         <Routes>
-            <Route path={'form'} element={<Form/>}/>
+            <Route path={'/'} element={<Form/>}/>
             <Route path={'admin'} element={<AdminPanel/>}/>
         </Routes>
     </div>
