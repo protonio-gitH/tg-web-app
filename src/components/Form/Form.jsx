@@ -59,8 +59,8 @@ const Form = () => {
                     <h2 className={'form__title'}>Проблема с товаром</h2>
                     <input type="text" placeholder={'Название товара'} className={'form__input form__input-name'} value={name} onChange={onChangeName}/> 
                     <textarea name="" id="" cols="30" rows="10" placeholder='Опишите проблему' className={'form__textarea'} value={problem} onChange={onChangeProblem}></textarea>
-                    <h3 className={'form__title-img'}>Вы можете загрузить фотографию</h3>
-                    <input type='file' accept="image/*,.png,.jpg,.jpeg,.gif" onChange={onChangePhoto}/>
+                    {/* <h3 className={'form__title-img'}>Вы можете загрузить фотографию</h3> */}
+                    {/* <input type='file' accept="image/*,.png,.jpg,.jpeg,.gif" onChange={onChangePhoto}/> */}
                 </form>
             </div>
         </div>
